@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <!-- bootstrap css-->
+     <link href="bootstrap/bootstrap-5.1.0-dist/css/bootstrap.min.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+     <!-- table css-->
+     <link href="css/table.css" rel="stylesheet">
+<title></title>
+<style type="text/css">
+
+#addProduct .product-card{
+  border:1px solid #d1d4d7;
+  border-radius:5px;
+  margin:15px;
+  padding:10px;
+  box-shadow:2px 2px 3px #d1d4d7;
+}
+
+#addProduct .product-card .imag{
+  border:1px solid #d1d4d7;
+  border-radius:5px;
+  height:200px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px;
+}
+
+#add{
+  background-color:#00bcd4;
+}
+
+@media (min-width: 720px){
+  #addProduct .product-card{
+    display:flex;
+    justify-content: space-between;
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+  }
+  
+  #addProduct .product-card .imag{
+    height:350px;
+  }
+}
+
+#message {
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+}
+
+.small {
+  max-width:200px;
+  height:100%;
+}
+
+
+</style>
+</head>
+<body>
+<div id="message"></div>
+<h1 style="text-align:center;" class="my-4">Hygiene Catalogue</h1>
+  
+<div class="table_responsive">
+
+<table class="table">
+       <thead class="thead-dark">
+              <tr>
+                  <th>No</th>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Stars</th>
+                  <th>Sort Description</th>
+                  <th>Description</th>
+                  <th>Before price</th>
+                  <th>After price</th>
+                  <th>Dimensions</th>
+                  <th>ID</th>
+                  <th>Action</th>
+              </tr>
+       </thead>
+       <tbody>
+                        
+       </tbody>
+</table>
+</div>
+<a class="btn btn-primary my-3 " data-bs-toggle="collapse" href="#product" role="button" aria-expanded="false" aria-controls="collapseExample">
+   add product
+</a>
+
+<div class="collapse " id="product">
+  <div class="card card-body">
+       <form id="addProduct" enctype="multipart/form-data">
+             <div class="product-card my-4" >
+                  <div class=" mb-3 imag">
+                  <input type="file" class="form-control image" id="file" accept="image/*" multiple name="image">
+                  </div>
+                  
+                  <div>
+                  <div class="mb-3 input">
+                  <input type="text" class="form-control title" id="title"  placeholder="Enter Title" name="title"  >
+                  </div>
+                  
+                  <div class="mb-3 input">
+                  <input type="text" class="form-control category" placeholder="Enter Category" name="category"  >
+                  </div>
+                  
+                  <div class="mb-3 input">
+                  <input type="text" class="form-control star" placeholder="Enter No of Stars" name="star" >
+                  </div>
+                  
+                  <div class="input mb-3" >
+                  <textarea class="form-control sortdescription" rows="4" placeholder="Enter Sort Description" name="sortDescription" ></textarea>
+                  </div>
+                  
+                  <div class="input mb-3" >
+                  <textarea class="form-control description" rows="5" placeholder="Enter Description" name="description" ></textarea>
+                  </div>
+                  
+                  <div class="mb-3 input d-flex">
+                  <input type="text" class="form-control before" placeholder="Enter Before price" name="before"  >
+                  <input type="text" class="form-control after" placeholder="Enter After price" name="after" >
+                  </div>
+                  
+                  <div class="mb-3 input">
+                  <input type="text" class="form-control dimension" placeholder="Enter Dimension in mm" name="dimension" >
+                  </div>
+                  
+       
+                      <button type="submit" class="btn btn-primary mb-3" id="add" >Add Product</button>
+                 </div>
+            </div>
+       </form>
+  </div>
+</div><hr>
+
+<!--top showcase catalogue-->
+<h1 style="text-align:center;" class="my-4">Showcase Catalogue</h1>
+  
+<div class="table_responsive">
+
+<table class="table">
+       <thead class="thead-dark">
+              <tr>
+                  <th>No</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>ID</th>
+                  <th>Background Color</th>
+                  <th>Action</th>
+              </tr>
+       </thead>
+       <tbody id="showcaseData" >
+                        
+       </tbody>
+</table>
+</div>
+<a class="btn btn-primary my-3 " data-bs-toggle="collapse" href="#showcase" role="button" aria-expanded="false" aria-controls="collapseExample">
+   add product
+</a>
+
+<div class="collapse " id="showcase">
+  <div class="card card-body">
+       <form id="showcasef" enctype="multipart/form-data">
+             <div class="product-card my-4" >
+                      <div class=" mb-3 imag">
+                      <input type="file" class="form-control image" id="file" accept="image/*" name="image">
+                      </div>
+                      </div>
+                      <div>
+                      <div class="mb-3 input">
+                      <input type="text" class="form-control title" id="title"  placeholder="Enter Title" name="title"  >
+                      </div>
+                      
+                      <div class="mb-3 input">
+                      <input type="text" class="form-control product_id" placeholder="Enter product_id" name="product_id" >
+                      </div>
+                      
+                      <div class="input mb-3" >
+                      <textarea class="form-control description" rows="4" placeholder="Enter Description" name="discreption" ></textarea>
+                      </div>
+                      
+                      <div class="mb-3 input">
+                      <input type="text" class="form-control bg_color" placeholder="Enter Background Color" name="bg_color" >
+                      </div>
+       
+                      <button type="submit" class="btn btn-primary mb-3" id="add" >Add Product</button>
+                 </div>
+       </form>
+  </div>
+</div><hr>
+
+<!-- bootstrap JavaScript file -->
+     <script src="bootstrap/bootstrap-5.1.0-dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript">
+let url1 = "http://localhost:3000/api/hygiene"
+
+
+function Display(type, displayMessage) {
+    let message = document.getElementById('message');
+    message.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                            <strong>Messge:</strong> ${displayMessage}
+                            <button type="button" class="close btn" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                            </button>
+                        </div>`;
+    setTimeout(function () {
+        message.innerHTML = ''
+    }, 4000);
+
+}
+
+// add product
+showProduct()
+  let myform= document.getElementById("addProduct")
+  let add= document.getElementById("add")
+  
+  let title = document.getElementById("title");
+  let category = document.querySelector(".category");
+  let star = document.querySelector(".star");
+  let sortdescription = document.querySelector(".sortdescription");
+  let description = document.querySelector(".description");
+  let before = document.querySelector(".before");
+  let after = document.querySelector(".after");
+  let dimension = document.querySelector(".dimension");
+  let image = document.querySelector(".image");
+  
+  
+  myform.addEventListener("submit" , function(e){
+      e.preventDefault()
+  
+      const impfile = document.querySelector("#file")
+      const formData = new FormData(myform);
+  
+      for(const file of impfile.files){
+          formData.append('image', file);
+      }
+      
+      
+      fetch(url1, {
+          method: 'POST',
+          body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+      })
+      .catch(error => {
+          console.log(error);
+      });
+      
+      title.value=""
+      category.value=""
+      star.value=""
+      sortdescription.value=""
+      description.value=""
+      before.value=""
+      after.value=""
+      dimension.value=""
+      image.value=""
+      
+      showProduct()
+      
+      
+      Display('success', 'Your Product has been successfully added')
+  })
+
+function showProduct(){
+     let tbody = document.querySelector("tbody")
+     let Data = "";
+     /*get request*/
+     fetch(url1)
+     .then(res => res.json())
+     .then(data => {
+         data.forEach(function(item,index){
+            Data += `
+               <tr>
+                   <td>${index + 1}</td>
+                   <td>${item.title}</td>
+                   <td>${item.category}</td>
+                   <td>${item.star}</td>
+                   <td class="small">${item.sortDescription}</td>
+                   <td class="small">${item.description}</td>
+                   <td>${item.before}</td>
+                   <td>${item.after}</td>
+                   <td>${item.dimension}</td>
+                   <td>${item._id}</td>
+                   <td data-id=${item._id}>
+                       <span class="action_btn" data-id=${item._id}>
+                            <a href="#" id="delete">Remove</a>
+                       </span>
+                  </td>
+               </tr>
+            `;
+         })
+        tbody.innerHTML = Data;
+         //document.write(Data)
+     
+     })
+     .catch((e)=>{
+     console.log(e)
+     })
+
+     // Delete request
+      tbody.addEventListener("click" , function(e){
+        e.preventDefault()
+        let id = e.target.parentElement.dataset.id
+        let deleteProduct = e.target.id == "delete"
+        
+        if(deleteProduct){
+          fetch(`${url1}/${id}`,{
+            method:"DELETE",
+          })
+          .then(res => res.json())
+          .then(() => {
+            showProduct()
+          })
+          
+          Display('danger', 'Your Product has been successfully Deleted')
+        }
+        
+        
+      })
+     
+  }
+  
+  
+  
+  // showcase
+  let url2 = "http://localhost:3000/api/hshowcase"
+  let showcase= document.getElementById("showcasef")
+  
+  showcaseProduct()
+  
+  showcase.addEventListener("submit" , function(e){
+       e.preventDefault()
+  
+       const impfile = document.querySelector("#file")
+       const formData = new FormData(showcase);
+  
+       for(const file of impfile.files){
+            formData.append('image', file);
+       }
+  
+  
+       fetch(url2, {
+            method: 'POST',
+            body: formData
+       })
+       .then(response => response.json())
+       .then(data => {
+       })
+       .catch(error => {
+            console.log(error);
+       });
+  
+  
+  
+  showcaseProduct()
+  Display('success', 'Your Showcase Product has been successfully added')
+  })
+  
+  
+  function showcaseProduct(){
+     let showcaseData= document.getElementById("showcaseData")
+     let showData = "";
+     
+     /*get request*/
+     fetch(url2)
+       .then(res => res.json())
+       .then(data => {
+             data.forEach(function(item,index){
+                  showData += `
+                              <tr>
+                                  <td>${index + 1}</td>
+                                  <td>${item.title}</td>
+                                  <td class="small">${item.discreption}</td>
+                                  <td>${item.product_id}</td>
+                                  <td>${item.bg_color}</td>
+                                  <td data-id=${item._id}>
+                                     <span class="action_btn" data-id=${item._id}>
+                                           <a href="#" id="deleteS">Remove</a>
+                                    </span>
+                                 </td>
+                             </tr>
+                               `;
+  })
+  showcaseData.innerHTML = showData;
+  
+  })
+  .catch((e)=>{
+  console.log(e)
+  })
+  
+  // Delete request
+  
+  showcaseData.addEventListener("click" , function(e){
+     e.preventDefault()
+     let idS = e.target.parentElement.dataset.id
+     console.log(idS)
+     let deleteProduct = e.target.id == "deleteS"
+     
+     if(deleteProduct){
+     console.log(`${url1}/${idS}`)
+        fetch(`${url2}/${idS}`,{
+            method:"DELETE",
+        })
+        .then(res => res.json())
+        .then(() => {
+            showcaseProduct()
+         })
+     
+     Display('danger', 'Your Product has been successfully Deleted')
+  
+  
+  }
+})
+}
+  
+  
+ 
+     
+</script>
+</body>
+</html>

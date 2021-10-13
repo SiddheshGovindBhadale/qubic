@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+<title>home</title>
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- bootstrap css-->
+<link href="bootstrap.min.css" rel="stylesheet" />
+
+<!-- aos css-->
+<link rel="stylesheet" href="aos.css" />
+
+<!-- owl carousel css-->
+<link rel="stylesheet" href="owl.carousel.min.css">
+<link rel="stylesheet" href="owl.theme.default.min.css">
+
+<!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- AOS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Glidejs -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css"
+    />
+    
+    <!-- navbar css-->
+    <link href="navbar10.css" rel="stylesheet" >
+    <!-- hero css-->
+    <link href="hero.css" rel="stylesheet" >
+    <!-- team css-->
+    <link href="ourteam.css" rel="stylesheet" >
+    <!-- testimonial css-->
+    <link href="testimonial.css" rel="stylesheet" >
+    <!-- footer css -->
+    <link href="footer.css" rel="stylesheet">
+    
+<style type="text/css">
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #000;
+  position: relative;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*img {
+  max-width: 100%;
+}*/
+
+li {
+  list-style: none;
+}
+
+ul {
+  margin-bottom:0px !important;
+}
+
+
+.container {
+  max-width: 114rem;
+  margin: 0 0px !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+/* Header */
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 100%;
+  background: #000;
+  z-index: 1;
+}
+
+.header .img img{
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  width: 60rem;
+  z-index: -1;
+}
+
+
+@media only screen and (max-width: 996px) {
+  .header {
+    min-height: 60vh;
+  }
+
+  .header .img img{
+    width: 50rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header .img img{
+    width: 40rem;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .header {
+    min-height: 100vh;
+  }
+
+  .header .img img{
+    width: 35rem;
+  }
+}
+
+/* About */
+
+.section {
+  padding: 5rem 0 7rem 0;
+  overflow-x: hidden;
+}
+
+.about {
+  margin-top: 5rem;
+  display:flex;
+  align-item:center;
+  justify-contain:center;
+  flex-direction: column;
+}
+
+.about-center {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem 5rem;
+  margin:auto !important;
+}
+
+.about .title , .theme .title{
+  margin: 4rem 0 7rem 0;
+  text-align: center;
+}
+
+.about .title h1 , .theme .title h1{
+  font-size: 3rem;
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+}
+
+.about .title h1::after , .theme .title h1::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -20%;
+  transform: translate(-50%, -50%);
+  background-color: #bf263a;
+  width: 50%;
+  height: 0.4rem;
+  z-index: 1;
+}
+
+.about .right h1 {
+  margin-bottom: 2rem;
+}
+
+.about .right p {
+  line-height: 2;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.about .right h1 span {
+  color: #bf263a;
+}
+
+a.mybtn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #bf263a;
+  color: #fff;
+  border-radius: 0.5rem;
+  border: 2px solid #bf263a;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 300ms ease-in-out;
+}
+
+a.btn:hover {
+  transform: translateY(-3px);
+  background-color: transparent;
+  color: inherit;
+}
+
+a.btn:active {
+  transform: translateY(0px);
+}
+
+@media only screen and (max-width: 996px) {
+  .about .right h1 {
+    font-size: 2rem;
+  }
+
+  .about .right p {
+    font-size: 1.5rem;
+  }
+
+  a.mybtn {
+    padding: 0.7rem 1.8rem;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .about-center {
+    grid-template-columns: 1fr;
+    gap: 3rem 0rem;
+  }
+
+  .about .left {
+    text-align: center;
+  }
+
+  
+}
+
+/* Services */
+
+.theme {
+  background-color:#dd9a05;
+}
+
+.theme .title {
+  color: #fff;
+}
+
+#services {
+  background:url("hmbg.jpg") ;
+  background-repeat-x:no-repeat;
+  background-repeat-y:no-repeat;
+  background-size:cover;
+  position: relative;
+}
+
+
+ .m-links  {
+               display: none;
+          }
+
+           .pointer-links {
+               position: relative;
+               padding: 70px 0;
+          }
+
+           .pointer-links .pointer {
+               width: 100%;
+               overflow: hidden;
+               display:none;
+               color:white;
+          }
+          
+          .pointer-links .wave{
+            animation-name: wave;
+            display:block;
+            animation-delay: 1.5s;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-direction: alternate;
+          }
+          
+  @keyframes wave {
+  0% {
+  width: 0;
+  }
+  
+  10% {
+  width: 5%;
+  display:block;
+  }
+  
+  20% {
+  width: 20%;
+  }
+  
+  30% {
+  width: 30%;
+  }
+  
+  40% {
+  width: 40%;
+  }
+  
+  50% {
+  width: 50%;
+  }
+  
+  60% {
+  width: 60%;
+  }
+  
+  70% {
+  width: 70%;
+  }
+  
+  80% {
+  width: 80%;
+  }
+  
+  90% {
+  width: 90%;
+  }
+  
+  100% {
+  width: 100%;
+  }
+  }
+
+           .pointer-links .pointer #pathLine {
+               height: 268px;
+               position: relative;
+               left: 0px;
+               bottom: 17%;
+               color: white;
+          }
+
+           .pointer-links .pointer #pathLine path {
+               color: white;
+          }
+
+           .pointer-links li {
+               list-style: none;
+          }
+          
+          .pointer-links li:before{
+          content:"\25CF";
+          border:2px solid white;
+          padding:0px 11px;
+          border-radius:100%;
+          color:white;
+          }
+
+           .pointer-links .links li span {
+               color:rgb(255,255,255);
+          }
+
+           .pointer-links .links .link-1 {
+               position: absolute;
+               top: 13%;
+               left: 11%;
+               font-size: 30px;
+          }
+
+           .pointer-links .links .link-2 {
+               position: absolute;
+               top: 40%;
+               left: 38%;
+               color: black;
+               font-size: 30px;
+          }
+
+           .pointer-links .links .link-3 {
+               position: absolute;
+               top: 72%;
+               left: 72%;
+               color: black;
+               font-size: 30px;
+          }
+          
+          #services .dark{
+          border: 2px solid black;
+          height:100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          background-color: black;
+          opacity: .5;
+          z-index:-2;
+          }
+
+          
+@media screen and (max-width: 720px) {
+  .m-links .links{
+  width: 100%;
+  margin-top: 20px;
+  display: block;
+  margin:10px 5px;
+  }
+  
+  .m-links{
+    display:flex;
+    align-item:center;
+    justify-contain:centet;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .links li {
+  text-align: left;
+  margin: 10px 0;
+  color:white;
+  }
+  
+  .pointer-links{
+  display: none;
+  }
+  
+}
+  
+  
+
+/* Teams */
+.team {
+  color: #fff;
+  background-color: #111;
+  padding: 3rem;
+  text-align: center;
+  border-radius: 1rem;
+  border-bottom: 4px solid transparent;
+  transition: all 300ms ease-in-out;
+}
+
+#testimonial {
+  background: black;
+}
+
+.team .img-cover {
+  overflow: hidden;
+  border-radius: 100%;
+  border: 4px solid #dd9a05;
+  height: 13rem;
+  width: 13rem;
+  margin: 0 auto;
+  transition: all 300ms ease-in-out;
+}
+
+.team .img-cover img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.team h3 {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+
+.team p {
+  font-size: 1.5rem;
+  color: #ccc;
+  width: 80%;
+  margin: 0 auto 1rem auto;
+}
+
+.team:hover {
+  border-bottom: 4px solid #fff;
+  background-color: #dd9a05;
+}
+
+.team:hover .img-cover {
+  border-color: #fff;
+}
+
+
+
+</style>
+</head>
+<body>
+<!-- Header -->
+   <header id="home" class="header">
+     <!-- Navigation -->
+     <nav class="nav">
+       <div class="navigation">
+         <div class="logo">
+                   <img src="Logo.png" >
+         </div>
+
+         <div class="menu">
+           <div class="top-nav">
+             <div class="logo">
+                   <img src="Logo.png" >
+             </div>
+             <div class="close">
+               <i class="fas fa-times"></i>
+             </div>
+           </div>
+
+           <ul class="nav-list">
+             <li class="nav-item">
+               <a href="index.html" class="nav-link ">Home</a>
+             </li>
+             <li class="nav-item">
+               <a href="hr service.html" class="nav-link ">Hr Services</a>
+             </li>
+             <li class="nav-item">
+               <a href="hygiene.html" class="nav-link ">Hygiene & Facility</a>
+             </li>
+             <li class="nav-item">
+               <a href="assessoris.html" class="nav-link ">Innovation & Product</a>
+             </li>
+             <li class="nav-item">
+               <a href="contact.html" class="nav-link ">Contact us</a>
+             </li>
+           </ul>
+         </div>
+
+         <div class="hamburger">
+           <i class="fas fa-bars"></i>
+         </div>
+       </div>
+     </nav>
+
+
+<!-- Hero -->
+      <div class="hero">
+        <h1>Qubic India- Exploring Innovations !!</h1>
+        <h4>Qubic India Is Expertized In <span id="type1"></span></h4>
+        <h4> recruitment</h4>
+        <a href="#">Contact us</a>
+      </div>
+      <div class="img">
+          <img class="banner" src="bg.png" alt="" />
+      </div>
+    </header>
+
+
+<!-- Main -->
+    <section class="section about" id="about">
+      <div class="title">
+        <h1>About</h1>
+      </div>
+
+      <div class="about-center container">
+      		<div class="col-md-12 img-hover left">  
+             <img alt="ux" class="rounded img-shadow img-fluid" src="about.jpg" data-aos="fade-right" data-aos-duration="2000"/>
+        </div>
+        <div class="right" data-aos="fade-left" data-aos-duration="2000">
+          <h1>Qubic India- Exploring Innovations !! <!--<span id="type2"></span>--></h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+            placeat inventore rerum tempore cupiditate, amet adipisci aut eius
+            facilis quisquam magni ratione maxime officiis earum blanditiis
+            magnam illum obcaecati vero? Odit ipsa facilis officiis fuga
+            voluptate similique sunt exercitationem voluptatibus, illo et fugit
+            eveniet provident quo atque, nesciunt explicabo tenetur!
+          </p>
+          <a href="hr service.html" class="mybtn">more</a>
+        </div>
+      </div>
+    </section>
+
+
+    
+<!-- Services -->
+    <section class="section theme" id="services">
+      <div class="title">
+        <h1>Our Services</h1>
+      </div>
+      
+    <div class="pointer-links">
+         <div class="pointer" >
+              <svg id="pathLine" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 2067.32 319.89" >
+                     <title>wavey line</title>
+                     <path id="line_svgPath"
+                      d="M-34.47,450.66s94.93-73.92,193.8-11,90.29,101.25,215.58,105.1C557.83,550.4,563.09,738.62,726,733.06c182-6.21,183.78-180.32,347.14-210.05C1227.39,494.94,1265.5,616.7,1390,629.4s211-82,347.87-44.63,179.55,93.78,294.55,64.75"
+                      transform="translate(34.78 -413.79)"
+                      style="fill:none;stroke:rgb(255,255,255);stroke-miterlimit:10; color: black;" />
+              </svg>
+         </div>
+         <ul class=" links">
+             <li class="link-1 change" data-aos="zoom-in" data-aos-delay="1000" data-bs-toggle="modal" data-bs-target="#Hr">
+                 <span>Hr Services</span>
+             </li>
+             <li class="link-2 change" data-aos="zoom-in" data-aos-delay="1000" data-bs-toggle="modal" data-bs-target="#hf">
+                 <span>Hygiene & Facility</span>
+             </li>
+             <li class="link-3 change" data-aos="zoom-in" data-aos-delay="1000" data-bs-toggle="modal" data-bs-target="#ip">
+                 <span>Innovation & Product</span>
+             </li>
+        </ul>
+    </div>
+    <div class="m-links">
+        <ul class=" links">
+            <li class="link-1 change" data-aos="fade-right" data-aos-delay="600" data-bs-toggle="modal" data-bs-target="#Hr">
+                <span class="fas fa-dot-circle"></span>
+                <span>Hr Services</span>
+            </li>
+            <li class="link-2 change" data-aos="fade-right" data-aos-delay="750" data-bs-toggle="modal" data-bs-target="#hf">
+                <span class="fas fa-dot-circle"></span>
+                <span>Hygiene & Facility</span>
+            </li>
+            <li class="link-3 change" data-aos="fade-right" data-aos-delay="950" data-bs-toggle="modal" data-bs-target="#ip">
+                <span class="fas fa-dot-circle"></span>
+                <span>Innovation & Product</span>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="dark"></div>
+    <!-- Modal -->
+    <div class="modal fade" id="Hr" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="text-align:center; ">
+    <div class="modal-content" style=" border-radius:10px; padding:10px 0;">
+    <button type="button" class="btn-close d-none" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-body">
+    <h1 class="mb-3">Hr Services</h1>
+    <p style="font-size:1.3rem; width:80%; margin:auto;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+    placeat inventore rerum tempore cupiditate, amet adipisci aut eius
+    facilis quisquam magni ratione maxime officiis earum blanditiis
+    magnam illum ob</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="hf" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="text-align:center; ">
+    <div class="modal-content" style=" border-radius:10px; padding:10px 0;">
+    <button type="button" class="btn-close d-none" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-body">
+    <h1 class="mb-3">Hygiene & Facility</h1>
+    <p style="font-size:1.3rem; width:80%; margin:auto;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+    placeat inventore rerum tempore cupiditate, amet adipisci aut eius
+    facilis quisquam magni ratione maxime officiis earum blanditiis
+    magnam illum ob</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="ip" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="text-align:center; ">
+    <div class="modal-content" style=" border-radius:10px; padding:10px 0;">
+    <button type="button" class="btn-close d-none" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-body">
+    <h1 class="mb-3">Innovation & Product</h1>
+    <p style="font-size:1.3rem; width:80%; margin:auto;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+    placeat inventore rerum tempore cupiditate, amet adipisci aut eius
+    facilis quisquam magni ratione maxime officiis earum blanditiis
+    magnam illum ob</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    
+    
+ <!-- our team -->
+    <section class="section theme" id="team">
+          <div class="title">
+               <h1 style="color: black;">Our Team</h1>
+          </div>
+          
+          <div class="team-area">
+               <div class="container box">
+                    <div class="row">
+                         <div class="col-md-4 col-sm-6 col-xs-12">
+                              <div class="single-team">
+                                   <div class="img-area">
+                                        <img src="https://i.postimg.cc/wMMhrMDm/2.jpg" class="img-responsive" alt="">
+                                        <div class="social">
+                                             <ul class="list-inline">
+                                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                                   <div class="img-text">
+                                        <h4>John Doe</h4>
+                                        <h5>Web Designer</h5>
+                                   </div>
+                              </div>
+                         </div>
+                         
+                         <div class="col-md-4 col-sm-6 col-xs-12">
+                              <div class="single-team">
+                                   <div class="img-area">
+                                        <img src="https://1.bp.blogspot.com/-cISC5xoywEA/YRleZqupHzI/AAAAAAAACZE/w7jfz6BTGf4IJv9kV-ijNP3kKxW3JpZXQCNcBGAsYHQ/s0/3%2B%25282%2529.jpg" class="img-responsive" alt="">
+                                        <div class="social">
+                                             <ul class="list-inline">
+                                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                                   <div class="img-text">
+                                        <h4>Alex Wood</h4>
+                                        <h5>Apps Developer</h5>
+                                   </div>
+                              </div>
+                         </div>
+                         
+                         <div class="col-md-4 col-sm-6 col-xs-12">
+                              <div class="single-team">
+                                   <div class="img-area">
+                                        <img src="https://1.bp.blogspot.com/-cGZY1xJjPNc/YRleZmEbEHI/AAAAAAAACZA/P-WOeYZegAQdUCF66C0E1ZF4zMEzaUvggCNcBGAsYHQ/s0/3%2B%25281%2529.jpg" class="img-responsive" alt="">
+                                        <div class="social">
+                                             <ul class="list-inline">
+                                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                                   <div class="img-text">
+                                        <h4>Rosie Meg</h4>
+                                        <h5>Game Developer</h5>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+              </div>
+          </div>
+    </section>
+
+
+<!-- Testimonial -->
+    <section class="section theme" id="testimonial" style="background-color:#eff2f7;">
+      <div class="title">
+        <h1 style="color:black;">Testimonial</h1>
+      </div>
+
+      <div class="wrapper">
+      <div class="owl-carousel main" >
+      <div class="elem">
+      <i class="fas fa-quote-left quote"></i>
+      <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
+      <div class="content">
+      <div class="info">
+      <div class="name">Alex Smith</div>
+      <div class="job">Designer | Developer</div>
+      <div class="stars">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="far fa-star"></i>
+      <i class="far fa-star"></i>
+      <i class="far fa-star"></i>
+      </div>
+      </div>
+      <div class="image">
+      <img src="profile-1.jpeg" alt="">
+      </div>
+      </div>
+      </div>
+      <div class="elem">
+      <i class="fas fa-quote-left quote"></i>
+      <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
+      <div class="content">
+      <div class="info">
+      <div class="name">Steven Chris</div>
+      <div class="job">YouTuber | Blogger</div>
+      <div class="stars">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="far fa-star"></i>
+      <i class="far fa-star"></i>
+      </div>
+      </div>
+      <div class="image">
+      <img src="profile-2.jpeg" alt="">
+      </div>
+      </div>
+      </div>
+      <div class="elem">
+      <i class="fas fa-quote-left  quote"></i>
+      <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
+      <div class="content">
+      <div class="info">
+      <div class="name">Kristina Bellis</div>
+      <div class="job">Freelancer | Advertiser</div>
+      <div class="stars">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="far fa-star"></i>
+      </div>
+      </div>
+      <div class="image">
+      <img src="profile-3.jpeg" alt="">
+      </div>
+      </div>
+      </div>
+      </div></div>
+      
+    </section>
+    
+ <!-- footer -->
+ <footer>
+ <div class="main-content">
+ 
+ <!-- about -->
+ <div class="left box">
+ <h2>About us</h2>
+ <div class="content">
+ <p>Qubic India is a team of entrepreneurial professionals with a vision aiming to explore
+ innovations in business relations that exceeds more than business.</p>
+ <div class="social">
+ <a href="#"><span class="fab fa-facebook-f"></span></a>
+ <a href="#"><span class="fab fa-twitter"></span></a>
+ <a href="#"><span class="fab fa-instagram"></span></a>
+ <a href="#"><span class="fab fa-youtube"></span></a>
+ </div>
+ </div>
+ </div>
+ 
+ <!-- address -->
+ <div class="meddle box">
+ <h2>Address</h2>
+ <div class="content">
+ <div class="place">
+ <span class="fas fa-map-marker-alt"></span>
+ <span class="text">#84 Ist Main Road, Nagappa bluedy Layout, Kaggadaspura, CV Raman Nagar,
+ Bengaluru, Karnataka 560093</span>
+ </div>
+ <div class="phone">
+ <span class="fas fa-phone-alt"></span>
+ <span class="text">080951 78797</span>
+ </div>
+ <div class="email">
+ <span class="fas fa-envelope"></span>
+ <span class="text">abc@example.com</span>
+ </div>
+ </div>
+ </div>
+ 
+ <!-- quick links -->
+ <div class="right box">
+ <h2>Quick Links</h2>
+ <div class="content">
+ <ul>
+ <li><a href="index.html" >Home</a></li>
+ <li><a href="hr service.html" >Hr Services</a></li>
+ <li><a href="hygiene.html" >Hygiene & Facility</a></li>
+ <li><a href="assessoris.html" >Innovation & Product</a></li>
+ <li><a href="contact.html" >Contact Us</a></li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ <div class="bottom">
+ <center>
+ <span class="far fa-copyright"></span><span> 2010-2021 Qubic India All rights reserved.</span>
+ </center>
+ </div>
+ </footer>
+
+
+<!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Typeit -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/7.0.4/typeit.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <!-- Glidejs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+  
+  
+  <!-- bootstrap JavaScript file -->
+  <script src="bootstrap.bundle.min.js"></script>
+  
+<script type="text/javascript">
+AOS.init();
+
+const menu = document.querySelector(".menu");
+const navOpen = document.querySelector(".hamburger");
+const navClose = document.querySelector(".close");
+
+const navLeft = menu.getBoundingClientRect().left;
+navOpen.addEventListener("click", () => {
+  if (navLeft < 0) {
+    menu.classList.add("show");
+    document.body.classList.add("show");
+    navBar.classList.add("show");
+  }
+});
+
+navClose.addEventListener("click", () => {
+  if (navLeft < 0) {
+    menu.classList.remove("show");
+    document.body.classList.remove("show");
+    navBar.classList.remove("show");
+  }
+});
+
+// Fixed Nav
+const navBar = document.querySelector(".nav");
+const navHeight = navBar.getBoundingClientRect().height;
+window.addEventListener("scroll", () => {
+  const scrollHeight = window.pageYOffset;
+  if (scrollHeight > navHeight) {
+    navBar.classList.add("fix-nav");
+  } else {
+    navBar.classList.remove("fix-nav");
+  }
+});
+
+// pointer on scroll
+const home = document.querySelector("#home");
+const about = document.querySelector("#about");
+const services = document.querySelector("#services");
+const homeH = home.getBoundingClientRect().height;
+const aboutH = about.getBoundingClientRect().height;
+const servicesH = services.getBoundingClientRect().height;
+
+const pointer = document.querySelector(".pointer")
+const equal = homeH + aboutH + servicesH - 2000;
+
+window.addEventListener("scroll", () => {
+  const scrollHeight = window.scrollY;
+  const wave = document.querySelector(".wave")
+  if (scrollHeight > equal) {
+    pointer.classList.add("wave");
+  } else {
+    pointer.classList.remove("wave");
+  }
+});
+
+
+gsap.from(".logo", { opacity: 0, duration: 1, delay: 0.5, y: -10 });
+gsap.from(".hamburger", { opacity: 0, duration: 1, delay: 1, x: 20 });
+gsap.from(".banner", { opacity: 0, duration: 1, delay: 1.5, x: -200 });
+gsap.from(".hero h3", { opacity: 0, duration: 1, delay: 2, y: -50 });
+gsap.from(".hero h1", { opacity: 0, duration: 1, delay: 2.5, y: -45 });
+gsap.from(".hero h4", { opacity: 0, duration: 1, delay: 3, y: -30 });
+gsap.from(".hero a", { opacity: 0, duration: 1, delay: 3.5, y: 50 });
+gsap.from(".nav-item", {
+  opacity: 0,
+  duration: 1,
+  delay: 1.2,
+  y: 30,
+  stagger: 0.2,
+});
+gsap.from(".icons span", {
+  opacity: 0,
+  duration: 1,
+  delay: 4,
+  x: -30,
+  stagger: 0.2,
+});
+
+const glide = document.querySelector(".glide");
+if (glide)
+  new Glide(glide, {
+    type: "carousel",
+    startAt: 0,
+    perView: 3,
+    gap: 30,
+    hoverpause: true,
+    autoplay: 2000,
+    animationDuration: 800,
+    animationTimingFunc: "cubic-bezier(0.165, 0.840, 0.440, 1.000)",
+    breakpoints: {
+      996: {
+        perView: 2,
+      },
+      768: {
+        perView: 1,
+      },
+    },
+  }).mount();
+
+
+
+new TypeIt("#type1", {
+  speed: 120,
+  loop: true,
+  waitUntilVisible: true,
+})
+  .type("Healthcare", { delay: 400 })
+  .pause(500)
+  .delete(10)
+  .type("lT & Non IT", { delay: 400 })
+  .pause(500)
+  .delete(11)
+  .type("Oil & Gas", { delay: 400 })
+  .pause(500)
+  .delete(9)
+  .type("Niche Hiring", { delay: 400 })
+  .pause(500)
+  .delete(12)
+  .go();
+
+
+</script>
+
+<!--<script type="text/javascript">
+  document.querySelector(".change").addEventListener("click" , function(
+   let change= document.querySelector(".modal-dialog")
+   change.style.backgroundColor = "#c7a427"
+  ))
+</script>-->
+
+<!-- owl carousel file -->
+  <script src="jquery.min.js"></script>
+  <script src="owl.carousel.min.js"></script>
+  
+  <script type="text/javascript">
+  $('.owl-carousel').owlCarousel({
+     loop:true,
+     margin:10,
+     nav:true,
+     responsive:{
+       0:{
+          items:1
+       },
+       600:{
+          items:1
+       },
+       1000:{
+          items:1
+       }
+     }
+  })
+  </script>
+</body>
+</html>

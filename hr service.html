@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- bootstrap css-->
+<link href="bootstrap.min.css" rel="stylesheet" />
+
+<!-- aos css-->
+<link rel="stylesheet" href="aos.css" />
+
+<!-- owl carousel css-->
+<link rel="stylesheet" href="owl.carousel.min.css">
+<link rel="stylesheet" href="owl.theme.default.min.css">
+
+<!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- AOS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Glidejs -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css"
+    />
+
+<!-- navbar css-->
+<link href="navbar.css" rel="stylesheet" >
+<!-- service css-->
+<link href="service.css" rel="stylesheet" >
+<!-- team css-->
+<link href="ourteam.css" rel="stylesheet" >
+<!-- testimonial css-->
+<link href="testimonial.css" rel="stylesheet" >
+<!-- footer css -->
+<link href="footer.css" rel="stylesheet"  >
+
+<title>Hr Services</title>
+<style type="text/css">
+
+:root {
+  --red:#db3951;
+  --blue:#00146c;
+  --orange:#f87d42;
+  --sky-blue:#c3f1ff;
+}
+
+a{
+  text-decoration:none;
+}
+
+
+#Hr-hero {
+  background-image:url("hr hero.jpg");
+  background-repeat-x:no-repeat;
+  background-repeat-y:no-repeat;
+  background-size:cover;
+  width:100%;
+  height:100vh;
+  flex-direction: column;
+  position:relative;
+}
+
+h1{
+  font-size:2.5rem;
+}
+
+.center{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+#Hr-hero  .Header {
+  width:100%;
+  height:100%;
+}
+
+#Hr-hero .curve  {
+  position:absolute;
+  width:100%;
+  bottom:0px;
+}
+
+#Hr-hero .Header  h4{
+  color:var(--blue);
+  font-family:Marriweathr,serif;
+  font-style:normal;
+  font-weight:500;
+  font-size:18px;
+  letter-spacing:1px;
+  margin:12px 0px;
+  text-transform:uppercase;
+}
+
+#Hr-hero  .Header h1{
+  color:var(--blue);
+  font-size:60px;
+  line-height:1.2;
+  margin:0px;
+  font-weight:700;
+}
+
+#Hr-hero .Header  p{
+  font-size:18px;
+  margin-bottom:47px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:33px;
+  width:55%;
+}
+
+#Hr-hero .Header a{
+  color:rgb(39,158,100);
+  background:rgb(19,40,125);
+  color:#fff;
+  display:inline-block;
+  font-size:17px;
+  padding:17px 34px;
+  transition:all 0.5s ease 0s;
+}
+
+#Hr-hero .Header a:hover {
+  background-color:blue;
+}
+
+@media screen and (max-width: 720px){
+  #Hr-hero .Header  h4{
+    font-size:13px;
+  }
+  
+  #Hr-hero  .Header h1{
+    font-size:30px;
+  }
+  
+  #Hr-hero .Header  p{
+    font-size:13px;
+    width:100%;
+  }
+  
+  #Hr-hero .Header a{
+    font-size:13px;
+    padding:10px 20px;
+  }
+}
+
+#about .dreamit-about-thumb img{
+  position:relative;
+  width:100%;
+}
+
+#about .pt-95{
+  margin-top:95px;
+  margin-bottom:70px;
+}
+
+
+
+#about .about-counter-text-inner{
+  position:relative;
+  top:40%;
+  transform:translateY(-50%);
+  background:#fff;
+  border-bottom:10px solid var(--orange);
+  width:250px;
+  margin:auto;
+}
+
+#about .about-counter-text-inner h1{
+  color:var(--blue);
+  font-size:33px;
+  font-weight:600;
+}
+
+#about .about-counter-text-inner h3{
+  color:var(--blue);
+  font-size:20px;
+  font-weight:600;
+  margin:3px;
+  text-transform:capitalize;
+}
+
+#about .dreamit-section-sub-title h5{
+  color:var(--blue);
+  font-size:16px;
+  font-weight:700;
+  letter-spacing:5px;
+  margin-bottom:10px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:30px;
+  text-transform:uppercase;
+}
+
+#about .dreamit-section-main-title h2,#about .dreamit-section-main-title h3{
+  font-size:23px;
+  font-weight:800;
+  line-height:1.2;
+  margin:0;
+  text-transform:capitalize;
+}
+
+#about .dreamit-section-main-title h2 span {
+  color:var(--blue);
+}
+
+#about .mt-15{
+  margin-top:15px;
+}
+
+#about p{
+  font-size:14px;
+}
+
+#about .about-icon img{
+  display:inline-block;
+  margin-right:18px;
+  height:33px;
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<!-- Navigation -->
+    <nav class="nav">
+      <div class="navigation">
+        <div class="logo">
+                  <img src="Logo.png" >
+        </div>
+
+        <div class="menu">
+          <div class="top-nav">
+            <div class="logo">
+                  <img src="Logo.png" >
+            </div>
+            <div class="close">
+              <i class="fas fa-times"></i>
+            </div>
+          </div>
+
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link ">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="hr service.html" class="nav-link ">Hr Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="hygiene.html" class="nav-link ">Hygiene & Facility</a>
+            </li>
+            <li class="nav-item">
+              <a href="assessoris.html" class="nav-link ">Innovation & Product</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link ">Contact us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+<!--header section-->
+<section id="Hr-hero" class="center" >
+    <div class="slider-area d-flex align-items-center">
+         <div class="container">
+              <div class="row">
+                   <div class="col-lg-12">
+                        <div class="Header" >
+                             <h4 data-aos="fade-up" data-aos-delay="300" style="color:#bf263a;">hr services</h4>
+                             <h1 data-aos="fade-up" data-aos-delay="500">We build your</h1>
+                             <h1 data-aos="fade-up" data-aos-delay="500">dream team</h1>
+                             <p data-aos="fade-up" data-aos-delay="700">Our best-in-class WordPress solution, with additional optimization to make running aWooCommerce online storer.</p>
+                             <div class="batn" data-aos="fade-up" data-aos-delay="900">
+                                  <a href="#about" data-aos="fade-up" data-aos-delay="1100">Leran More</a>
+                                  <a href="contact.html" style="background-color:var(--red)" data-aos="fade-up" data-aos-delay="1500">Contact Us</a>
+                             </div>
+                        </div>
+                    </div>
+               </div>
+          </div>
+    </div>
+    <div class="curve" >
+         <img src="slider-1.png" >
+    </div>
+ </section>
+
+<!--about section-->
+<section id="about" >
+<div class="dreamit-about-area pt-95 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 " data-aos="zoom-in">
+                <div class="dreamit-about-thumb tilt-effect">
+                    <img class="tilt-effect" src="habout.jpg" alt="">
+                </div>
+                <div class="dreamit-single-about-counter alltuchtopdown ">
+                    <div class="about-counter-text-inner center">
+                        <h1><span class="counter">10</span> <span>+</span></h1>
+                        <div class="about-counter-title">
+                            <h3>Years of</h3>
+                            <h3>Experience</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 pl-35">
+                <div class="dreamit-bar-thumb">
+                    <img src="human-resources.png" alt="">
+                </div>
+ 
+                <div class="dreamit-section-title pb-30">
+                    <div class="dreamit-section-sub-title">
+                        <h5>About Our Company</h5>
+                    </div>
+                    <div class="dreamit-section-main-title">
+                        <h3>We are the best HR</h3>
+                        <h2>Services <span>Provider</span></h2>
+                    </div>
+                    <div class="dreamit-section-text mt-15">
+                        <p>Our mission is not only to meet your expectations but to exceed them, we also provide many more like condos and apartment cleaning. Our unique 22-Step Healthy Touch Deep Cleaning System</p>
+                    </div>
+                    <div class="dreamit-about-content d-flex pt-3">
+                        <div class="about-icon">
+                            <img src="checked.png" >
+                        </div>
+                        <div class="about-content-text">
+                            <p>The housekeepers we hiblue are professionals who take pride in doing excellent work and in exceeding expectations.</p>
+                        </div>
+                    </div>
+                    <div class="dreamit-about-content d-flex">
+                        <div class="about-icon">
+                            <img src="checked.png" >
+                        </div>
+                        <div class="about-content-text">
+                            <p>We carefully screen all of our cleaners, so you can rest assublue that your home would receive the absolute highest quality.</p>
+                        </div>
+                    </div>
+                    <div class="dreamit-about-content d-flex">
+                        <div class="about-icon">
+                            <img src="checked.png" >
+                        </div>
+                        <div class="about-content-text">
+                            <p>Your time is precious, and we understand that cleaning is really just one more item on your to-do list.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--service section-->
+<div class="service py-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-10 col-11 mx-auto">
+            <div class="mt-2 mb-5 text-center">
+              <h1 class="service_heading">OUR SERVICES</h1>
+            </div>
+            <div class="row ">
+              <!-- left side data -->
+              <div class="col-md-6 mt-md-2 m-0">
+               <div class="dreamit-section-sub-title">
+                    <h5>What We Do</h5>
+               </div>
+                <h4>Qubic India is expertized in</h4>
+                <h6 class="font-weight-light subtitle">Junior, mid & Senior level recruitments into the most Niche Domains Of Healthcare, Engineering , IT & Non IT Domains</h6>
+                <!-- one more grid sys for services -->
+                <div class="row mt-md-5">
+                  <div class="col-md-6 mt-3">
+                    <h6 class="font-weight-medium">Healthcare</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                  </div>
+                  <div class="col-md-6 mt-3">
+                    <h6 class="font-weight-medium">lT & Non IT</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                  </div>
+                  <div class="col-md-6 mt-3">
+                    <h6 class="font-weight-medium">Oil & Gas</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                  </div>
+                  <div class="col-md-6 mt-3">
+                    <h6 class="font-weight-medium">Niche Hiring</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- right side data -->
+              <div class="col-md-6 mt-md-5 m-0">
+                <div class="row wrap-service">
+                  <!-- left side images -->
+                  <div class="col-md-6">
+                    <div class="row">
+                    <div class="col-md-12 img-hover mb-4">  
+                        <img alt="ux" class="rounded img-shadow img-fluid" src="Healthcare.jpg" data-aos="fade-right"/>
+                      </div>
+                      <div class="col-md-12 img-hover mb-4">
+                        <img alt="ux" class="rounded img-shadow img-fluid" src="IT and Non IT.jpg" data-aos="fade-left"/>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- right side images -->
+                  <div class="col-md-6 uneven-box">
+                   <div class="row">
+                      <div class="col-md-12 img-hover mb-4">
+                        <img alt="ux" class="rounded img-shadow img-fluid" src="oil and gas.jpg" data-aos="fade-right"/>
+                      </div>
+                      <div class="col-md-12 img-hover mb-4">
+                        <img alt="ux" class="rounded img-shadow img-fluid" src="niche hiring.jpg" data-aos="fade-left"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+<section id="about"  >
+<div class="dreamit-about-area pt-95 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 pl-35">
+                <div class="dreamit-bar-thumb">
+                    <img src="human-resources.png" alt="">
+                </div>
+ 
+                <div class="dreamit-section-title pb-30">
+                    <div class="dreamit-section-sub-title">
+                        <h5>WHY CHOOSE US</h5>
+                    </div>
+                    <div class="dreamit-section-main-title">
+                        <h3>Why You Choose</h3>
+                        <h2>Our <span>Services</span></h2>
+                    </div>
+                    <div class="dreamit-section-text mt-15">
+                        <p>Our mission is not only to meet your expectations but to exceed them, we also provide many more like condos and apartment cleaning. Our unique 22-Step Healthy Touch Deep Cleaning System</p>
+                    </div>
+                    <div class="dreamit-about-content d-flex pt-3">
+                        <div class="about-icon">
+                            <img src="handshake.png" >
+                        </div>
+                        <div class="about-content-text">
+                            <div class="dreamit-section-main-title mb-2">
+                                 <h2> We Are Committed</h2>
+                            </div>
+                            <p>The housekeepers we hiblue are professionals who take pride in doing excellent work and in exceeding expectations.</p>
+                        </div>
+                    </div>
+                    <div class="dreamit-about-content d-flex">
+                        <div class="about-icon">
+                            <img src="rating.png" >
+                        </div>
+                        <div class="about-content-text">
+                            <div class="dreamit-section-main-title mb-2">
+                                 <h2>Customer Focused Reviews</h2>
+                            </div>
+                            <p>We carefully screen all of our cleaners, so you can rest assublue that your home would receive the absolute highest quality.</p>
+                        </div>
+                    </div>
+                    <div class="dreamit-about-content d-flex">
+                        <div class="about-icon">
+                            <img src="24-hours.png" >
+                        </div>
+                        <div class="about-content-text">
+                            <div class="dreamit-section-main-title mb-2">
+                                 <h2>24/7 Unlimited Support</h2>
+                            </div>
+                            <p>Your time is precious, and we understand that cleaning is really just one more item on your to-do list.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 ">
+                 <div class="dreamit-about-thumb tilt-effect">
+                      <img class="tilt-effect" src="habout.jpg" alt="">
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--our team section-->
+<section class="team-section pb-5 pt-5" style="background-color:#eff2f7;">
+     <div class="container">
+         <div class="row">
+             <div class="section-title">
+                 <div class="mt-2 mb-5 text-center">
+                      <h1 class="service_heading">OUR TEAM</h1>
+                 </div>
+                 <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+             </div>
+         </div>
+         <div class="team-area">
+         <div class="container box">
+         <div class="row">
+         <div class="col-md-4 col-sm-6 col-xs-12">
+         <div class="single-team">
+         <div class="img-area">
+         <img src="https://i.postimg.cc/wMMhrMDm/2.jpg" class="img-responsive" alt="">
+         <div class="social">
+         <ul class="list-inline">
+         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+         <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+         </ul>
+         </div>
+         </div>
+         <div class="img-text">
+         <h4>John Doe</h4>
+         <h5>Web Designer</h5>
+         </div>
+         </div>
+         </div>
+         
+         <div class="col-md-4 col-sm-6 col-xs-12">
+         <div class="single-team">
+         <div class="img-area">
+         <img src="https://1.bp.blogspot.com/-cISC5xoywEA/YRleZqupHzI/AAAAAAAACZE/w7jfz6BTGf4IJv9kV-ijNP3kKxW3JpZXQCNcBGAsYHQ/s0/3%2B%25282%2529.jpg" class="img-responsive" alt="">
+         <div class="social">
+         <ul class="list-inline">
+         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+         <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+         </ul>
+         </div>
+         </div>
+         <div class="img-text">
+         <h4>Alex Wood</h4>
+         <h5>Apps Developer</h5>
+         </div>
+         </div>
+         </div>
+         
+         <div class="col-md-4 col-sm-6 col-xs-12">
+         <div class="single-team">
+         <div class="img-area">
+         <img src="https://1.bp.blogspot.com/-cGZY1xJjPNc/YRleZmEbEHI/AAAAAAAACZA/P-WOeYZegAQdUCF66C0E1ZF4zMEzaUvggCNcBGAsYHQ/s0/3%2B%25281%2529.jpg" class="img-responsive" alt="">
+         <div class="social">
+         <ul class="list-inline">
+         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+         <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+         </ul>
+         </div>
+         </div>
+         <div class="img-text">
+         <h4>Rosie Meg</h4>
+         <h5>Game Developer</h5>
+         </div>
+         </div>
+         </div>
+         </div>
+         </div>
+         </div>
+     </div>
+  </section>
+
+
+<div class="demo"  style="background-color:#fcfcfc;">
+    <div class="container">
+        <div class=" mb-5 text-center">
+             <h1 class="service_heading pt-5">What Clients are Say</h1>
+        </div>
+        <div class="wrapper pb-5">
+        <div class="owl-carousel main"   >
+        <div class="elem">
+        <i class="fas fa-quote-left quote"></i>
+        <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
+        <div class="content">
+        <div class="info">
+        <div class="name">Alex Smith</div>
+        <div class="job">Designer | Developer</div>
+        <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        </div>
+        </div>
+        <div class="image">
+        <img src="profile-1.jpeg" alt="">
+        </div>
+        </div>
+        </div>
+        <div class="elem">
+        <i class="fas fa-quote-left quote"></i>
+        <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
+        <div class="content">
+        <div class="info">
+        <div class="name">Steven Chris</div>
+        <div class="job">YouTuber | Blogger</div>
+        <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        </div>
+        </div>
+        <div class="image">
+        <img src="profile-2.jpeg" alt="">
+        </div>
+        </div>
+        </div>
+        <div class="elem">
+        <i class="fas fa-quote-left  quote"></i>
+        <p>Lorem aliasry ipsum dolor sits ametans, consectetur adipisicing elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos repellendus repudiandae deleniti ideas fuga molestiae, alias.</p>
+        <div class="content">
+        <div class="info">
+        <div class="name">Kristina Bellis</div>
+        <div class="job">Freelancer | Advertiser</div>
+        <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        </div>
+        </div>
+        <div class="image">
+        <img src="profile-3.jpeg" alt="">
+        </div>
+        </div>
+        </div>
+        </div></div>
+    </div>
+</div>
+
+
+
+<!-- footer -->
+   <footer>
+        <div class="main-content">
+   
+             <!-- about -->
+             <div class="left box">
+                  <h2>About us</h2>
+                  <div class="content">
+                       <p>Qubic India is a team of entrepreneurial professionals with a vision aiming to explore innovations in business relations that exceeds more than business.</p>
+                       <div class="social">
+                       <a href="#"><span class="fab fa-facebook-f"></span></a>
+                       <a href="#"><span class="fab fa-twitter"></span></a>
+                       <a href="#"><span class="fab fa-instagram"></span></a>
+                       <a href="#"><span class="fab fa-youtube"></span></a>
+                       </div>
+                  </div>
+              </div>
+   
+              <!-- address -->
+              <div class="meddle box">
+                   <h2>Address</h2>
+                   <div class="content">
+                        <div class="place">
+                             <span class="fas fa-map-marker-alt"></span>
+                             <span class="text">#84 Ist Main Road, Nagappa bluedy Layout, Kaggadaspura, CV Raman Nagar, Bengaluru, Karnataka 560093</span>
+                        </div>
+                        <div class="phone">
+                             <span class="fas fa-phone-alt"></span>
+                             <span class="text">080951 78797</span>
+                        </div>
+                        <div class="email">
+                             <span class="fas fa-envelope"></span>
+                             <span class="text">abc@example.com</span>
+                        </div>
+                   </div>
+              </div>
+   
+              <!-- quick links -->
+              <div class="right box">
+                   <h2>Quick Links</h2>
+                   <div class="content">
+                        <ul>
+                        <li><a href="index.html" >Home</a></li>
+                        <li><a href="hr service.html" >Hr Services</a></li>
+                        <li><a href="hygiene.html" >Hygiene & Facility</a></li>
+                        <li><a href="assessoris.html" >Innovation & Product</a></li>
+                        <li><a href="contact.html" >Contact Us</a></li>
+                        </ul>
+                   </div>
+              </div>
+         </div>
+         <div class="bottom">
+              <center>
+                     <span class="far fa-copyright"></span><span> 2010-2021 Qubic India All rights reserved.</span>
+              </center>
+         </div>
+  </footer>
+   
+ <!-- AOS -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+ <!-- Typeit -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/7.0.4/typeit.min.js"></script>
+ <!-- GSAP -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+ <!-- Glidejs -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+ <!-- bootstrap JavaScript file -->
+ <script src="bootstrap.bundle.min.js"></script>
+ 
+ <script type="text/javascript">
+  AOS.init();
+  
+  const menu = document.querySelector(".menu");
+  const navOpen = document.querySelector(".hamburger");
+  const navClose = document.querySelector(".close");
+  
+  const navLeft = menu.getBoundingClientRect().left;
+  navOpen.addEventListener("click", () => {
+  if (navLeft < 0) {
+  menu.classList.add("show");
+  document.body.classList.add("show");
+  navBar.classList.add("show");
+  }
+  });
+  
+  navClose.addEventListener("click", () => {
+  if (navLeft < 0) {
+  menu.classList.remove("show");
+  document.body.classList.remove("show");
+  navBar.classList.remove("show");
+  }
+  });
+  
+  // Fixed Nav
+  const navBar = document.querySelector(".nav");
+  const navHeight = navBar.getBoundingClientRect().height;
+  window.addEventListener("scroll", () => {
+  const scrollHeight = window.pageYOffset;
+  if (scrollHeight > navHeight) {
+  navBar.classList.add("fix-nav");
+  } else {
+  navBar.classList.remove("fix-nav");
+  }
+  });
+  
+  
+  
+  
+  gsap.from(".logo", { opacity: 0, duration: 1, delay: 0.5, y: -10 });
+  gsap.from(".hamburger", { opacity: 0, duration: 1, delay: 1, x: 20 });
+  gsap.from(".banner", { opacity: 0, duration: 1, delay: 1.5, x: -200 });
+  gsap.from(".nav-item", {
+  opacity: 0,
+  duration: 1,
+  delay: 1.2,
+  y: 30,
+  stagger: 0.2,
+  });
+  
+  
+  
+  
+  
+  // Scroll To
+  const links = [...document.querySelectorAll(".scroll-link")];
+  links.map(link => {
+  link.addEventListener("click", e => {
+  e.preventDefault();
+  
+  const id = e.target.getAttribute("href").slice(1);
+  const element = document.getElementById(id);
+  const fixNav = navBar.classList.contains("fix-nav");
+  let position = element.offsetTop - navHeight;
+  
+  window.scrollTo({
+  top: position,
+  left: 0,
+  });
+  
+  navBar.classList.remove("show");
+  menu.classList.remove("show");
+  document.body.classList.remove("show");
+  });
+  });
+  
+  
+  </script>
+
+  <!-- aos JavaScript file -->
+  <script src="aos.js"></script>
+  <script>
+    AOS.init(
+       {
+        offset:50,
+        duration:1000
+       }
+    );
+  </script>
+  
+  
+  <!-- owl carousel file -->
+  <script src="jquery.min.js"></script>
+  <script src="owl.carousel.min.js"></script>
+  
+  <script type="text/javascript">
+  $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      center:true,
+      autoplay:true,
+      autoplayTimeout:3000,
+      responsive:{
+           0:{
+              items:1
+           },
+           600:{
+              items:1
+           },
+           1000:{
+              items:1
+           }
+      }
+  })
+  </script>
+  
+  <!-- icon -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </body>
+  </html>

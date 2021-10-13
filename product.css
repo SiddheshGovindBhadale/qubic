@@ -1,0 +1,371 @@
+
+.product_showcase .item{
+  height:600px;
+  justify-content:space-between;
+}
+
+.product_showcase .item .info {
+  margin-left:45px;
+}
+
+.product_showcase .item .info .new{
+
+  font-size: 1.2rem;
+  padding:5px 10px;
+  background-color: gold;
+}
+
+.product_showcase .item .info h1{
+  font-size:1.7rem;
+  width:300px;
+}
+
+.product_showcase .item .info p{
+  font-size:.9rem;
+  width:300px;
+
+}
+
+.product_showcase .item .info .more{
+  border:2px solid black;
+  background: black;
+  padding:7px 30px;
+  color:white;
+}
+
+
+
+.product_showcase .item .img img{
+  height:550px;
+  width:100%;
+}
+
+@media (max-width: 720px){
+  .product_showcase .item{
+    flex-direction:column-reverse;
+  }
+  
+  .product_showcase .item .info {
+    margin-left:0px;
+    text-align:center;
+    margin-bottom:30px;
+  }
+  
+  .product_showcase .item .info h1{
+    font-size:1.4rem;
+    width:300px;
+  }
+  
+  .product_showcase .item .info p{
+    margin:8px 0;
+  }
+  
+  .product_showcase .item .img{
+    margin-top:10px;
+  }
+  
+  .product_showcase .item .img img{
+    height:350px;
+    align-items:flex-start;
+  }
+}
+
+@media (min-width: 1083px) {
+  body{
+    margin: 0 65px;
+  }
+  
+  .product_showcase .item{
+    height: 550px;
+  }
+
+  .product_showcase .item .img{
+    margin-right: 70px;
+   
+  }
+
+  .product_showcase .item .img img{
+    height: 530px;
+  
+    width: 500px;
+  }
+
+  .product_showcase .item .info{
+    margin-left: 70px;
+   
+  }
+
+  .product_showcase .item .info .new{
+
+    font-size: 1.2rem;
+    padding:5px 10px;
+    background-color: gold;
+    margin-bottom: 200px;
+  }
+
+  .product_showcase .item .info h1{
+    font-size: 2.2rem;
+
+    width: 500px;
+    margin-top: 10px;
+  }
+
+  .product_showcase .item .info p{
+
+    font-size: 1.3rem;
+    width: 500px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.image-card {
+    width: 100%;
+    height: auto;
+    background-color: #FFF;
+    transition: all 0.6s cubic-bezier(.25,.8,.25,1);
+    box-shadow: 0 0.2rem 2.8rem rgba(36,36,36,.1);
+    overflow: hidden;
+    border:2px solid #e7ebed;
+}
+.image-card:hover {
+    box-shadow: 0 0.1rem .8rem rgba(36,36,36,.1);
+    transition: all 0.6s cubic-bezier(.25,.8,.25,1);
+}
+.image-card .image {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    max-width: 100%;
+    height: 250px;
+    z-index: 4;
+}
+.image-card .content {
+    padding: 30px 30px;
+}
+.image-card .content p:last-child {
+    margin-bottom: 0px;
+}
+.image-card .title {
+    margin-bottom: 15px;
+}
+.image-card .title h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    color: #111;
+    line-height: 30px;
+    margin: 0;
+}
+.image-card .divider {
+    position: relative;
+    width: 100px;
+    height: 2px;
+    background-color: rgba( 0,0,0,0.05 );
+    margin-bottom: 15px;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    z-index: 0;
+}
+.image-card .excerpt {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #707070;
+    line-height: 27px;
+    margin-bottom: 30px;
+}
+.image-card .readmore {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.image-card .readmore a.button-readmore {
+    display: inline-block;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    text-decoration: none;
+    background-color: #09b85b;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+.image-card .readmore a.button-readmore:hover {
+    background-color: #707070;
+    color: #fff;
+}
+.image-card .image .top-price-badge {
+    position: absolute;
+    padding: 4px 12px;
+    border-radius: 30px;
+    background:white;
+    top: 15px;
+    right: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}*/
+
+.product {
+  margin-top:30px;
+}
+
+
+.product .main {
+  display:flex;
+  flex-wrap:wrap;
+  margin:20px;
+}
+
+.card-body{
+  justify-content: space-between;
+}
+/*@media (max-width: 720px){
+  .product .main {
+    grid-template-columns:1fr;
+  }
+}
+
+@media (min-width: 720px) {
+  .product .main {
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product .main {
+    grid-template-columns:1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1450px) {
+  .product .main {
+    grid-template-columns:1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 2560px) {
+  .product .main {
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+  }
+  .image-card .image {
+    height:400px;
+  }
+}
+*/
+
+@media (min-width: 375px) {
+  .image-card .image {
+    height:300px;
+  }
+}
+
+@media (min-width: 435px) {
+  .image-card .image {
+    height:320px;
+  }
+}
+
+
+.product_category {
+  margin:50px 0;
+}
+
+.product_category .main{
+  padding-left:10px;
+  flex-direction: column;
+}
+
+.product_category .main .item {
+  width:100%;
+  justify-content: flex-start;
+  margin:5px;
+}
+
+.product_category .main .item img{
+  height:35px;
+  margin:3px 8px;
+}
+
+.product_category .main .item h2{
+  font-size:1rem;
+  text-align:center;
+  margin:0px;
+}
+ 
+.search{
+  max-width:330px;
+  margin:20px 0;
+}
+
+@media (min-width: 720px) {
+  .product_category .main{
+    flex-direction:row;
+    margin:20px 0;
+  }
+  
+  .product_category .main .item {
+    flex-direction: column;
+    width:150px;
+    margin:0 20px;
+  }
+  
+  .product_category .main .item img{
+    height:50px;
+  }
+  
+  .product {
+    margin-top:10px;
+  }
+  
+  .search_section{
+    justify-content:flex-end;
+    padding-right:45px;
+  }
+}
+
+
+.close-modal{
+  height:60px;
+}
+
+.close-modal .fas{
+  font-size:30px;
+  width:50px;
+  height:40px;
+  z-index:100;
+  text-align:center;
+  position:fixed;
+  top:20px ;
+  right:10px;
+}
+
+.modal .modal-dialog{
+  margin:10px 10px !important;
+  max-width:100vw !important;
+}
+
+
+@media (min-width: 720px) {
+  .modal .modal-dialog{
+    height:600px !important;
+  }
+}

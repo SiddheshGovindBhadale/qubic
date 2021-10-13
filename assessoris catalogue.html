@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <!-- bootstrap css-->
+     <link href="bootstrap/bootstrap-5.1.0-dist/css/bootstrap.min.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+     <!-- table css-->
+     <link href="css/table.css" rel="stylesheet">
+<title></title>
+<style type="text/css">
+
+#addProduct .product-card{
+  border:1px solid #d1d4d7;
+  border-radius:5px;
+  margin:15px;
+  padding:10px;
+  box-shadow:2px 2px 3px #d1d4d7;
+}
+
+#addProduct .product-card .imag{
+  border:1px solid #d1d4d7;
+  border-radius:5px;
+  height:200px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px;
+}
+
+#add{
+  background-color:#00bcd4;
+}
+
+@media (min-width: 720px){
+  #addProduct .product-card{
+    display:flex;
+    justify-content: space-between;
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+  }
+  
+  #addProduct .product-card .imag{
+    height:350px;
+  }
+}
+
+#message {
+  position:fixed;
+  top:0;
+  width:100%;
+}
+
+.small {
+  max-width:200px;
+  height:100%;
+}
+
+
+</style>
+</head>
+<body>
+<div id="message"></div>
+<h1 style="text-align:center;" class="my-4">Add New Product</h1><hr>
+  
+  <form id="addProduct" enctype="multipart/form-data">
+        <div class="product-card my-4" >
+             <div class=" mb-3 imag">
+                  <input type="file" class="form-control image" id="file" accept="image/*" multiple name="image">
+             </div>
+             
+             <div>
+                  <div class="mb-3 input">
+                       <input type="text" class="form-control title" id="title"  placeholder="Enter Title" name="title"  >
+                  </div>
+             
+                  <div class="mb-3 input">
+                       <input type="text" class="form-control category" placeholder="Enter Category" name="category"  >
+                  </div>
+             
+                  <div class="mb-3 input">
+                       <input type="text" class="form-control star" placeholder="Enter No of Stars" name="star" >
+                  </div>
+  
+                  <div class="input mb-3" >
+                       <textarea class="form-control sortdescription" rows="4" placeholder="Enter Sort Description" name="sortDescription" ></textarea>
+                  </div>
+             
+                  <div class="input mb-3" >
+                       <textarea class="form-control description" rows="5" placeholder="Enter Description" name="description" ></textarea>
+                  </div>
+             
+                  <div class="mb-3 input d-flex">
+                       <input type="text" class="form-control before" placeholder="Enter Before price" name="before"  >
+                       <input type="text" class="form-control after" placeholder="Enter After price" name="after" >
+                  </div>
+             
+                  <div class="mb-3 input">
+                       <input type="text" class="form-control dimension" placeholder="Enter Dimension in mm" name="dimension" >
+                  </div>
+             
+                  <button type="submit" class="btn btn-primary mb-3" id="add" >Add Product</button>
+                  
+            </div>
+       </div>
+  </form>
+<!--  <button class="btn btn-primary mb-3" id="add" >edit Product</button>-->
+<hr><hr>
+
+<div class="table_responsive">
+
+<table class="table">
+       <thead class="thead-dark">
+              <tr>
+                  <th>No</th>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Stars</th>
+                  <th>Sort Description</th>
+                  <th>Description</th>
+                  <th>Before price</th>
+                  <th>After price</th>
+                  <th>Dimensions</th>
+                  <th>ID</th>
+                  <th>Action</th>
+              </tr>
+       </thead>
+       <tbody>
+                        
+       </tbody>
+</table>
+</div>
+
+
+
+
+<!-- bootstrap JavaScript file -->
+     <script src="bootstrap/bootstrap-5.1.0-dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript">
+let url = "http://localhost:3000/api/assessoris"
+
+
+function Display(type, displayMessage) {
+    let message = document.getElementById('message');
+    message.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                            <strong>Messge:</strong> ${displayMessage}
+                            <button type="button" class="close btn" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                            </button>
+                        </div>`;
+    setTimeout(function () {
+        message.innerHTML = ''
+    }, 4000);
+
+}
+
+
+showProduct()
+  let myform= document.getElementById("addProduct")
+  let add= document.getElementById("add")
+  
+  let title = document.getElementById("title");
+  let category = document.querySelector(".category");
+  let star = document.querySelector(".star");
+  let sortdescription = document.querySelector(".sortdescription");
+  let description = document.querySelector(".description");
+  let before = document.querySelector(".before");
+  let after = document.querySelector(".after");
+  let dimension = document.querySelector(".dimension");
+  let image = document.querySelector(".image");
+  
+  
+  myform.addEventListener("submit" , function(e){
+      e.preventDefault()
+  
+      const impfile = document.querySelector("#file")
+      const formData = new FormData(myform);
+  
+      for(const file of impfile.files){
+          formData.append('image', file);
+      }
+      
+      
+      fetch(url, {
+          method: 'POST',
+          body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+      })
+      .catch(error => {
+          console.log(error);
+      });
+      
+      title.value=""
+      category.value=""
+      star.value=""
+      sortdescription.value=""
+      description.value=""
+      before.value=""
+      after.value=""
+      dimension.value=""
+      image.value=""
+      
+      showProduct()
+      
+      
+      Display('success', 'Your Product has been successfully added')
+  })
+
+function showProduct(){
+     let tbody = document.querySelector("tbody")
+     let Data = "";
+     /*get request*/
+     fetch(url)
+     .then(res => res.json())
+     .then(data => {
+         data.forEach(function(item,index){
+            Data += `
+               <tr>
+                   <td>${index + 1}</td>
+                   <td>${item.title}</td>
+                   <td>${item.category}</td>
+                   <td>${item.star}</td>
+                   <td class="small">${item.sortDescription}</td>
+                   <td class="small">${item.description}</td>
+                   <td>${item.before}</td>
+                   <td>${item.after}</td>
+                   <td>${item.dimension}</td>
+                   <td>${item._id}</td>
+                   <td data-id=${item._id}>
+                       <span class="action_btn" data-id=${item._id}>
+                            <a href="#" id="delete">Remove</a>
+                       </span>
+                  </td>
+               </tr>
+            `;
+         })
+        tbody.innerHTML = Data;
+         //document.write(Data)
+     
+     })
+     .catch((e)=>{
+     console.log(e)
+     })
+
+     // Delete request
+      tbody.addEventListener("click" , function(e){
+        e.preventDefault()
+        let id = e.target.parentElement.dataset.id
+        let deleteProduct = e.target.id == "delete"
+        
+        if(deleteProduct){
+          fetch(`${url}/${id}`,{
+            method:"DELETE",
+          })
+          .then(res => res.json())
+          .then(() => {
+            showProduct()
+          })
+          
+          Display('danger', 'Your Product has been successfully Deleted')
+        }
+        
+        
+      })
+     
+  }
+     
+     
+</script>
+</body>
+</html>

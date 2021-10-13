@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+.wrapper{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper .elem{
+  background: #fff;
+ width:100%;
+ margin:0px !important;
+ border-radius:10px 10px 0 0;
+  padding: 25px;
+  elem-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+}
+.wrapper .elem i.quote{
+  font-size: 20px;
+  color:#bf263a;
+}
+.wrapper .elem .content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.elem .info .name{
+  font-weight: 600;
+  font-size: 17px;
+}
+.elem .info .job{
+  font-size: 16px;
+  font-weight: 500;
+  color: #bf263a;
+}
+.elem .info .stars{
+  margin-top: 2px;
+}
+.elem .info .stars i{
+  color: #bf263a;
+  background:none !important;
+}
+.elem .content .image{
+  height: 75px;
+  width: 75px;
+  padding: 3px;
+  background: #bf263a;
+  border-radius: 50%;
+}
+.content .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.elem:hover .content .image img{
+  border-color: #fff;
+}
+
+.owl-item{
+        width:90vw;
+      }
+      
+      .owl-carousel{
+        max-width:90vw;
+        border-radius:10px 10px 10px 10px;
+        z-index:0 !important;
+        margin:auto !important;
+      }
+      
+      .owl-nav{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        background-color:#bf263a;
+        padding:5px 10px;
+        border-radius:0px 0px 10px 10px;
+      }
+      
+      .owl-nav span{
+      padding:0px 16px;
+      font-size:30px;
+      color:white;
+      background-color:black;
+      margin:5px 5px;
+      color:#bf263a;
+      background-color:white;
+      border-radius:100%;
+      }
+      
+      .owl-dots {
+      display:none;
+      }
+
+@media (max-width: 1045px) {
+  .wrapper .elem{
+    width:100%;
+    margin: 10px 0;
+  }
+}
+@media (max-width: 702px) {
+  .wrapper .elem{
+    width: 100%;
+  }
+}
+
+@media (min-width: 720px) {
+  .owl-item{
+    width:600px !important;
+  }
+  
+  .owl-carousel{
+    max-width:600px !important;
+  }
+}
